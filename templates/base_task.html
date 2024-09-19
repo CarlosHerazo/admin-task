@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'src/css/task.css' %}">
+    <link rel="stylesheet" href="{% static 'src/css/output.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
+    <title>Task</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/">start</a></li> 
+            <li><a href="">scheduled tasks</a></li>
+            <li><a href="">new task</a></li>
+            <li><a href="">log out</a></li>
+        </ul>
+    </header>
+
+    {% block content %}{% endblock  %}
+
+
+    <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+</body>
+</html>

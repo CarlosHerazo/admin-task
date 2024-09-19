@@ -1,0 +1,40 @@
+{% extends "base_task.html" %} {% block content %}
+<div class="content p-6">
+  <div class="flex flex-col">
+   
+    <a
+    href="#"
+    class="w-full rounded-lg p-6 bg-white hover:ring-violet-500 active:bg-violet-200 focus:outline-none focus:ring focus:ring-violet-300 ring-2 ring-transparent transition-colors duration-300 flex flex-col"
+>
+    <div class="flex items-center space-x-3">
+        <i class="fa-solid fa-plus text-lg"></i> <!-- Icono de suma -->
+        <h3 class="text-slate-900 text-sm font-semibold">
+          New Task
+        </h3>
+    </div>
+    <p class="text-slate-500 text-sm">
+      New Task Create
+    </p>
+</a>
+  </div>
+
+  <div
+    class="flex flex-col m-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96 p-6 hover:shadow cursor-pointer transition-colors duration-300"
+  >
+    <div class="flex items-center mb-4">
+      <i class="fa-solid fa-pencil text-lg"></i>
+      <h5 class="ml-3 text-slate-800 text-xl font-semibold">
+        Website Review Check
+      </h5>
+    </div>
+    <p class="block text-slate-600 leading-normal font-light mb-4">
+      Because it&apos;s about motivating the doers. Because I&apos;m here to
+      follow my dreams and inspire others.
+    </p>
+    <div class="flex justify-between items-center text-sm text-slate-500">
+      <span class="bg-green-300 p-1 rounded-lg text-green-800">Agendado</span>
+      <span>20 septiembre 2023</span>
+    </div>
+  </div>
+</div>
+{% endblock %}

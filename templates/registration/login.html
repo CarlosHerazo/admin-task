@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form class="form" method="post" action="">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <label for="user">User</label>
+        <input type="text" name="username" placeholder="user">
+        <label for="pass">Password</label>
+        <input type="password" name="password" placeholder="pass">
+        <input type="submit" value="Iniciar">
+          {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
+  <p class="reset"><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
+    </form>
+
+{% endblock %}

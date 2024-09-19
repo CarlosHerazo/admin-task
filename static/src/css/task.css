@@ -1,0 +1,89 @@
+@import url('index.css');/* index.css */
+
+/* Estilo general del cuerpo */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    padding: 1rem 0;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header li {
+    margin: 0 1rem;
+}
+
+header a {
+    color: var(--text-color-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--secondary-color);
+}
+
+/* Estilo del contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Agrega una clase para botones si es necesario */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size);
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilo para formularios si es necesario */
+input, textarea, select {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+    font-size: var(--font-size);
+    width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+
+.content-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
