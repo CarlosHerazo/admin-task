@@ -78,7 +78,6 @@ WSGI_APPLICATION = 'earringsApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-print(os.getenv('DATABASE_URL'))
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
