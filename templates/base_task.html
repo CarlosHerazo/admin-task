@@ -17,7 +17,7 @@
             <li><a href="/">start</a></li> 
             <li><a href="">scheduled tasks</a></li>
             <li><a href="">new task</a></li>
-            <li><a href="">log out</a></li>
+            <li><a href="{% url 'logout' %}">log out</a></li>
         </ul>
     </header>
 
@@ -27,5 +27,7 @@
     <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
     <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
     <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="{% static 'src/js/api.js' %}"></script>
 </body>
 </html>
