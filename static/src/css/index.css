@@ -19,10 +19,10 @@
     font-family: var(--font-family);
 }
 
-.container {
+/* .container {
     background-color: var(--background-color);
     padding: 20px; 
-}
+} */
 
 .form {
     padding: 20px;

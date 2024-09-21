@@ -1,0 +1,28 @@
+# settings.py
+
+# 1. URL a la que se redirige después de iniciar sesión
+LOGIN_REDIRECT_URL = '/'  # Redirige a la página principal tras un inicio de sesión exitoso
+
+# 2. URL a la que se redirige después de cerrar sesión
+LOGOUT_REDIRECT_URL = '/login/'  # Redirige a la vista de inicio de sesión después de cerrar sesión
+
+# 3. URL utilizada para la vista de inicio de sesión
+LOGIN_URL = '/login/'  # URL que se muestra para iniciar sesión si el usuario no está autenticado
+
+# 4. Tiempo de validez del enlace de restablecimiento de contraseña (en segundos)
+PASSWORD_RESET_TIMEOUT = 300  # Enlace de restablecimiento válido por 5 minutos
+
+# 5. Backends de autenticación utilizados por Django
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Backend por defecto para autenticación de usuarios
+    # Puedes añadir otros backends si necesitas autenticación personalizada
+]
+
+# 6. Modelo de usuario personalizado
+AUTH_USER_MODEL = 'myapp.MyUser'  # Permite definir un modelo de usuario diferente al predeterminado
+
+# 7. Tiempo que una sesión es válida (en segundos)
+SESSION_COOKIE_AGE = 1209600  # Tiempo de sesión por defecto de 2 semanas
+
+# 8. Cierra la sesión al cerrar el navegador
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # La sesión se cierra cuando el navegador se cierra

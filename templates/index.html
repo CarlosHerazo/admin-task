@@ -12,10 +12,10 @@
       </div>
     </div>
 
-    <div class="content p-6 mt-2 flex gap-2" id="card-container">
-      <!-- Aqui estaran las card renderizadas -->
+    <div class="content p-6 mt-2 grid grid-cols-3 gap-6" id="card-container">
+      <!-- Aquí estarán las cards renderizadas -->
+  </div>
   
-    </div>
 
     <!-- Main modal -->
     <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
@@ -45,11 +45,11 @@
               </div>
               <div class="col-span-2 sm:col-span-1">
                 <label for="end-date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">end date</label>
-                <input type="date" name="start-date" class="p-2" />
+                <input type="date" name="end-date" class="p-2" />
               </div>
               <div class="col-span-2">
                 <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Task Description</label>
-                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500" placeholder="Write task description here"></textarea>
+                <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500" placeholder="Write task description here"></textarea>
               </div>
             </div>
             <button type="submit" class="text-white inline-flex items-center bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800">
@@ -65,4 +65,5 @@
 
   <script type="module" src="{% static 'src/js/modal_task.js' %}"></script>
   <script type="module" src="{% static 'src/js/index.js' %}"></script>
+  <script type="module" src="{% static 'src/js/new_task.js' %}"></script>
 {% endblock %}

@@ -4,6 +4,17 @@ export const URL_SERVER_API_READ = `${URL_SERVER_API}/read`
 export const URL_SERVER_API_CREATE = `${URL_SERVER_API}/create` 
 export const URL_SERVER_API_UPDATE = `${URL_SERVER_API}/update`
 export const URL_SERVER_API_DELETE = `${URL_SERVER_API}/delete`
+export const CSRFTOKEN = localStorage.getItem("csrftoken")
+export const USER_ID = localStorage.getItem("user_id")
+
+export const  notyf = new Notyf({
+    duration: 4000,
+    position: {
+      x: 'right',
+      y: 'top',
+    },
+  });
+
 
 
 // clase para peticion
@@ -33,8 +44,23 @@ export class ApiRestTask {
     }
 
     // método para crear una nueva tarea
-    create(csrftoken) {
-        // Implementación aquí
+    create(data_form) {
+        // Enviar una petición POSTx|
+
+        return axios({
+            method: 'post',
+            url: `${URL_SERVER_API_CREATE}/`,
+            data: data_form, 
+            headers: {
+                'X-CSRFToken': this.csrftoken
+            }
+        }).then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error('Error al mandar datos:', error);
+        });
+        
     }
 
     // método para actualizar una tarea

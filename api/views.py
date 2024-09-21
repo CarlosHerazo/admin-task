@@ -27,13 +27,13 @@ def post_task(request):
             # Obtener el estado por nombre (scheduled, to finish, etc.)
             state_name = data.get('state', 'scheduled')
             state = State.objects.get(name=state_name)
-
+            print(data)
             # Crear la nueva tarea
             task = Task.objects.create(
                 name=data['name'],
                 description=data['description'],
-                start_date=data['start_date'],
-                end_date=data['end_date'],
+                start_date=data['start-date'],
+                end_date=data['end-date'],
                 state=state,
                 id_user=request.user  
             )
