@@ -23,11 +23,15 @@ export const RES_READ = async () => {
         console.error("Error fetching data:", error);
     }
 
+
     const card_task = document.querySelectorAll(".card_task")
 
-    card_task.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            console.log(btn.id)
+    card_task.forEach(  (card) => {
+        card.addEventListener("click", async (e) => {
+            // obtenemos los datos de la card
+            const read_data = new ApiRestTask(user_id, card.id, csrftoken);
+            const res = await read_data.read_data(card.id, csrftoken)
+            console.log(res)
         })
     })
    

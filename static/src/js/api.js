@@ -1,3 +1,4 @@
+
 // constantes para peticiones
 export const URL_SERVER_API = 'http://127.0.0.1:8000/api_task/tasks'
 export const URL_SERVER_API_READ = `${URL_SERVER_API}/read` 
@@ -63,6 +64,21 @@ export class ApiRestTask {
         
     }
 
+    read_data(task_id) {
+        //  
+        return axios({
+            method:'get',
+            url: `${URL_SERVER_API_READ}/task/${task_id}`,
+            responseType:'json'
+
+        })
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error('Error al obtener datos:', error);
+        });
+    }
     // método para actualizar una tarea
     update(task_id, csrftoken) {
         // Implementación aquí
